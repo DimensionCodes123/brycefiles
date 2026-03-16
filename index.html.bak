@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Bryce Files Release</title>
+
+<link rel="stylesheet" href="main.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</head>
+
+<body>
+
+<canvas id="matrix"></canvas>
+
+<div id="bootScreen">
+
+<p>> Initializing Bryce Systems...</p>
+<p>> Accessing secure archive...</p>
+<p>> Decrypting Bryce Files...</p>
+<p>> Preparing release protocol...</p>
+
+</div>
+
+<div class="container">
+
+<h1 id="headline">BRYCE FILES</h1>
+
+<p class="subtitle">Secure Drop Incoming</p>
+
+<div id="countdown">
+
+<div class="time-box">
+<span id="days"></span>
+<p>DAYS</p>
+</div>
+
+<div class="time-box">
+<span id="hours"></span>
+<p>HOURS</p>
+</div>
+
+<div class="time-box">
+<span id="minutes"></span>
+<p>MINUTES</p>
+</div>
+
+<div class="time-box">
+<span id="seconds"></span>
+<p>SECONDS</p>
+</div>
+
+</div>
+
+<div id="decryptSection">
+
+<p>Decrypting Files...</p>
+
+<div class="progress-bar">
+<div class="progress"></div>
+</div>
+
+</div>
+
+<div id="content">
+
+<h2>FILES UNLOCKED</h2>
+
+</div>
+
+<div id="videoSection">
+  <video id="releaseVideo" controls>
+    <source src="YOUR_FIRST_VIDEO_URL.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <button id="nextVideoBtn">Next Video</button>
+</div>
+
+<div id="videoSection2">
+  <video id="secondVideo" controls>
+    <source src="YOUR_SECOND_VIDEO_URL.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<div id="thanksScreen">
+  <h2>THANKS FOR WATCHING</h2>
+</div>
+
+</div>
+
+<audio id="releaseSound">
+<source src="https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3">
+</audio>
+
+<audio id="tickSound">
+<source src="https://assets.mixkit.co/active_storage/sfx/2583/2583-preview.mp3">
+</audio>
+
+<script src="main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+/* boot screen -> show site */
+
+setTimeout(()=>{
+document.getElementById("bootScreen").style.display="none"
+document.querySelector(".container").style.display="block"
+},5000)
+
+
+/* countdown */
+
+const second = 1000
+const minute = second * 60
+const hour = minute * 60
+const day = hour * 24
+
+const releaseDate = "March 17, 2026 00:00:00"
+
+const countDown = new Date(releaseDate).getTime()
+const x = setInterval(()=>{
+
+const now = new Date().getTime()
+const distance = countDown - now
+
+document.getElementById("days").innerText = Math.floor(distance/day)
+document.getElementById("hours").innerText = Math.floor((distance%day)/hour)
+document.getElementById("minutes").innerText = Math.floor((distance%hour)/minute)
+document.getElementById("seconds").innerText = Math.floor((distance%minute)/second)
+
+if(distance < 0){
+
+clearInterval(x)
+
+document.getElementById("headline").innerText="FILES RELEASED"
+
+document.getElementById("countdown").style.display="none"
+document.getElementById("decryptSection").style.display="none"
+document.getElementById("content").style.display="block"
+
+document.getElementById("releaseSound").play()
+
+confetti({
+particleCount:250,
+spread:150,
+origin:{y:.6}
+})
+
+}
+
+},1000)
+
+
+/* MATRIX RAIN */
+
+const canvas=document.getElementById("matrix")
+const ctx=canvas.getContext("2d")
+
+canvas.height=window.innerHeight
+canvas.width=window.innerWidth
+
+const letters="01ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+const fontSize=16
+const columns=canvas.width/fontSize
+
+const drops=[]
+
+for(let xCol=0;xCol<columns;xCol++)
+drops[xCol]=1
+
+function draw(){
+
+ctx.fillStyle="rgba(0,0,0,0.05)"
+ctx.fillRect(0,0,canvas.width,canvas.height)
+
+ctx.fillStyle="#00ff9c"
+ctx.font=fontSize+"px monospace"
+
+for(let i=0;i<drops.length;i++){
+
+const text=letters.charAt(Math.floor(Math.random()*letters.length))
+
+ctx.fillText(text,i*fontSize,drops[i]*fontSize)
+
+if(drops[i]*fontSize>canvas.height && Math.random()>0.975)
+drops[i]=0
+
+drops[i]++
+
+}
+
+}
+
+setInterval(draw,33)
