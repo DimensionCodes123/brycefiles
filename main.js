@@ -13,7 +13,7 @@ const hour = minute * 60
 const day = hour * 24
 
 // test countdown: 20 seconds from page load
-const countDown = 03/17 0:0:0 AM
+const countDown = new Date().getTime() + 20 * second
 
 const x = setInterval(()=>{
 
