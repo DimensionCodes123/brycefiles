@@ -104,8 +104,9 @@ const thanksScreen = document.getElementById("thanksScreen")
 const finalEvidenceBtn = document.getElementById("finalEvidenceBtn")
 const statement = document.getElementById("statement")
 const bennettScreen = document.getElementById("bennettScreen")
+const realEvidenceBtn = document.getElementById("realEvidenceBtn")
 
-if(firstVideo && nextVideoBtn && secondVideo && videoSection && videoSection2 && thanksScreen && finalEvidenceBtn && statement && bennettScreen){
+if(firstVideo && nextVideoBtn && secondVideo && videoSection && videoSection2 && thanksScreen && finalEvidenceBtn && statement && bennettScreen && realEvidenceBtn){
 
 // hide button until first video completely finishes
 nextVideoBtn.style.display = "none"
@@ -138,6 +139,11 @@ statement.style.display = "none"
 document.querySelector(".container").style.display = "none"
 document.getElementById("matrix").style.display = "none"
 bennettScreen.style.display = "flex"
+
+// after ~4 seconds of flashing, reveal Real Evidence button
+setTimeout(()=>{
+realEvidenceBtn.style.display = "inline-block"
+},4000)
 },7000)
 })
 
