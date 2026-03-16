@@ -1,19 +1,22 @@
-/* boot screen -> show site (test) */
+/* boot screen -> show site */
 
 setTimeout(()=>{
 document.getElementById("bootScreen").style.display="none"
 document.querySelector(".container").style.display="block"
 
 
-/* countdown - short test countdown (20 seconds) */
+/* countdown */
 
 const second = 1000
 const minute = second * 60
 const hour = minute * 60
 const day = hour * 24
 
-// test countdown: 20 seconds from page load
-const countDown = new Date().getTime() + 20 * second
+const releaseDate = "March 17, 2026 00:00:00"
+
+
+const countDown = new Date(releaseDate).getTime()
+const totalDuration = 24 * hour;
 
 const x = setInterval(()=>{
 
@@ -26,11 +29,13 @@ document.getElementById("minutes").innerText = Math.floor((distance%hour)/minute
 document.getElementById("seconds").innerText = Math.floor((distance%minute)/second)
 
 // Update progress bar
-const totalDuration = 20 * second; // 20 seconds is the initial countdown duration
-const progressPercent = ((totalDuration - distance) / totalDuration) * 100;
-if (decryptProgressBar) {
-    decryptProgressBar.style.width = `${progressPercent}%`;
-}
+            const progressPercent = ((totalDuration - (distance % totalDuration)) / totalDuration) * 100;
+            if (decryptProgressBar) {
+                decryptProgressBar.style.width = `${progressPercent}%`;
+            }
+
+
+
 
 tickSound.currentTime = 0
 try {
@@ -49,6 +54,8 @@ tickSound.currentTime = 0
 if (decryptProgressBar) {
     decryptProgressBar.style.width = `100%`; // Ensure it's 100% at the end
 }
+
+
 
 document.getElementById("headline").innerText="FILES RELEASED"
 
@@ -72,7 +79,7 @@ origin:{y:.6}
 }
 
 },1000)
-},2000)
+},5000)
 
 
 /* MATRIX RAIN (same as main) */
