@@ -105,8 +105,9 @@ const finalEvidenceBtn = document.getElementById("finalEvidenceBtn")
 const statement = document.getElementById("statement")
 const bennettScreen = document.getElementById("bennettScreen")
 const realEvidenceBtn = document.getElementById("realEvidenceBtn")
+const realEvidenceScreen = document.getElementById("realEvidenceScreen")
 
-if(firstVideo && nextVideoBtn && secondVideo && videoSection && videoSection2 && thanksScreen && finalEvidenceBtn && statement && bennettScreen && realEvidenceBtn){
+if(firstVideo && nextVideoBtn && secondVideo && videoSection && videoSection2 && thanksScreen && finalEvidenceBtn && statement && bennettScreen && realEvidenceBtn && realEvidenceScreen){
 
 // hide button until first video completely finishes
 nextVideoBtn.style.display = "none"
@@ -145,6 +146,11 @@ setTimeout(()=>{
 realEvidenceBtn.style.display = "inline-block"
 },5000)
 },7000)
+
+realEvidenceBtn.addEventListener("click",()=>{
+bennettScreen.style.display = "none"
+realEvidenceScreen.style.display = "flex"
+})
 })
 
 }
