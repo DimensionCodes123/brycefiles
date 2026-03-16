@@ -178,7 +178,8 @@ box-shadow:0 0 30px cyan;
 
 #nextVideoBtn,
 #finalEvidenceBtn{
-margin-top:16px;
+display:block;
+margin:16px auto 0;
 padding:10px 22px;
 border:none;
 border-radius:999px;
@@ -219,6 +220,8 @@ inset:0;
 background:#050000;
 color:#ff2b2b;
 z-index:9999;
+display:flex;
+flex-direction:column;
 align-items:center;
 justify-content:center;
 }
@@ -259,7 +262,8 @@ transform:translate(3px,2px);
 }
 
 #realEvidenceBtn{
-margin-top:40px;
+display:block;
+margin:40px auto 0;
 padding:14px 32px;
 border:none;
 border-radius:999px;
