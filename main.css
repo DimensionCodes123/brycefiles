@@ -219,7 +219,6 @@ inset:0;
 background:#050000;
 color:#ff2b2b;
 z-index:9999;
-display:flex;
 align-items:center;
 justify-content:center;
 }
