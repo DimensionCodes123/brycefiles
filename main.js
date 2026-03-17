@@ -13,7 +13,7 @@ const minute = second * 60
 const hour = minute * 60
 const day = hour * 24
 
-const releaseDate = "March 17, 2026 00:00:00"
+const releaseDate = "March 16, 2026 23:00:00"
 
 
 const countDown = new Date(releaseDate).getTime()
