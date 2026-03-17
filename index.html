@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bryce Files Release</title>
+<link rel="stylesheet" href="main.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&family=Varela+Round&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+<canvas id="matrix"></canvas>
+
+<div id="bootScreen">
+
+<p>> Accessing secure archive...</p>
+<p>> Decrypting Bryce Files...</p>
+
+</div>
+
+<div class="container">
+
+<h1 id="headline">BRYCE FILES</h1>
+
+
+<div id="countdown">
+<div class="time-box">
+<span id="days"></span>
+<p>DAYS</p>
+</div>
+<div class="time-box">
+<span id="hours"></span>
+<p>HOURS</p>
+</div>
+<div class="time-box">
+<span id="minutes"></span>
+<p>MINUTES</p>
+</div>
+<div class="time-box">
+<span id="seconds"></span>
+<p>SECONDS</p>
+</div>
+</div>
+
+<div id="decryptSection">
+<p>Decrypting Files...</p>
+<div class="progress-bar">
+<div class="progress"></div>
+</div>
+</div>
+
+<div id="content">
+
+</div>
+
+<div id="intrductionSection" class="custom-video-player-container">
+  <video id="intrduction">
+    <source src="intro.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="custom-controls">
+    <button class="play-pause-btn"></button>
+    <div class="progress-bar-wrapper">
+      <div class="progress-bar-fill"></div>
+      <input type="range" class="progress-slider" value="0" min="0" max="100">
+      <span class="time-display">00:00 / 00:00</span>
+    </div>
+    <div class="volume-control">
+      <button class="mute-btn"></button>
+      <input type="range" class="volume-slider" min="0" max="1" step="0.1" value="1">
+    </div>
+  </div>
+</div>
+
+<div id="videoSection" class="custom-video-player-container">
+  <video id="releaseVideo">
+    <source src="video 1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="custom-controls">
+    <button class="play-pause-btn"></button>
+    <div class="progress-bar-wrapper">
+      <div class="progress-bar-fill"></div>
+      <input type="range" class="progress-slider" value="0" min="0" max="100">
+      <span class="time-display">00:00 / 00:00</span>
+    </div>
+    <div class="volume-control">
+      <button class="mute-btn"></button>
+      <input type="range" class="volume-slider" min="0" max="1" step="0.1" value="1">
+    </div>
+  </div>
+</div>
+
+<div id="videoSection2" class="custom-video-player-container">
+  <video id="secondVideo">
+    <source src="video 2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="custom-controls">
+    <button class="play-pause-btn"></button>
+    <div class="progress-bar-wrapper">
+      <div class="progress-bar-fill"></div>
+      <input type="range" class="progress-slider" value="0" min="0" max="100">
+      <span class="time-display">00:00 / 00:00</span>
+    </div>
+    <div class="volume-control">
+      <button class="mute-btn"></button>
+      <input type="range" class="volume-slider" min="0" max="1" step="0.1" value="1">
+    </div>
+  </div>
+</div>
+
+<div id="thanksScreen">
+  <h2>THANKS FOR WATCHING</h2>
+</div>
+
+<div id="statement">
+  <h2>Official Statement Regarding Recent Events</h2>
+  <p>
+  Following recent discussions and speculation, we would like to formally clarify that the situation in question was conducted as part of a controlled social experiment.
+  </p>
+  <p>
+  The objective of this experiment was to observe natural reactions, interpretations, and responses when individuals are presented with unexpected or unusual information. The scenario was intentionally structured to evaluate communication patterns and group dynamics in a real-time environment.
+  </p>
+  <p>
+  At no point was the intent to cause harm, distress, or long-term confusion. The circumstances were created solely for observational and experimental purposes. Now that the experiment has concluded, we believe it is important to provide transparency regarding its nature and purpose.
+  </p>
+  <p>
+  We appreciate everyone who participated, knowingly or unknowingly, as your responses contributed to the overall insight gained from this experiment.
+  </p>
+</div>
+
+</div>
+
+<div id="bennettScreen" style="display:none;">
+  <div class="bennett-glitch" data-text="BENNETT FILES">BENNETT FILES</div>
+  <button id="realEvidenceBtn">Real Evidence</button>
+</div>
+
+<div id="realEvidenceScreen" style="display:none;">
+  <div class="real-evidence-content">
+    <div class="bennett-glitch" data-text="BENNETT FILES">BENNETT FILES</div>
+    <div class="custom-video-player-container">
+      <video id="realEvidenceVideo">
+        <source src="jansenbennettfiles.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="custom-controls">
+        <button class="play-pause-btn"></button>
+        <div class="progress-bar-wrapper">
+          <div class="progress-bar-fill"></div>
+          <input type="range" class="progress-slider" value="0" min="0" max="100">
+          <span class="time-display">00:00 / 00:00</span>
+        </div>
+        <div class="volume-control">
+          <button class="mute-btn"></button>
+          <input type="range" class="volume-slider" min="0" max="1" step="0.1" value="1">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<audio id="releaseSound" preload="auto">
+<source src="sounds/release.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="tickSound" preload="auto">
+<source src="sounds/tick.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="glitchSound" preload="auto">
+<source src="sounds/glitch.mp3" type="audio/mpeg">
+</audio>
+
+<script src="main.js"></script>
+</body>
+</html>
